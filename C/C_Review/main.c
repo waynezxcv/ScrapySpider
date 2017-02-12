@@ -14,6 +14,55 @@ void inplace_swap(int* x,int* y);
 void sum_swap(int* x,int* y);
 void fileCopy(FILE* ifp,FILE* ofp);
 
+void pointerAndArray ();
+void optionTest();
+void unixAPI();
+void IO_API();
+
+
+
+
+int main(int argc, const char * argv[]) {
+    
+    return 0;
+}
+
+
+
+/******************************************* Pointer & Array **************************************/
+
+void pointerAndArray () {
+    
+    int arr [5] = {1,2,3,4,5};
+    
+    //数组名在大多数情况下，会被隐式转换成 “数组第一个元素指针的右值”。
+    //除了：
+    //1.sizeof运算时
+    //sizeof(arr) != sizeof(int *)
+    size_t s = sizeof(arr);//得到的是整个数组所有元素的大小
+    printf("sizeof(arr) : %zu\n",s);//结果是sizeof(int) * 5
+    
+    
+    //2.取地址时
+    //对数组名取地址得到指针进行加减，增减字节数是sizeof(arr)
+    //即返回的是指向的是数组的指针，而非初始元素的指针
+    //&arr是一个指向 有5个int类型元素数组的指针。
+    
+    int (*ap) [5] = &arr;//指向数组的指针
+    int* ip = arr;//指向数组第一个元素的指针(&arr[0])
+    
+    printf("(&arr) : %p\n",ap);
+    printf("(&arr + 1) : %p\n",ap + 1);//结果是在数组第一个元素的地址的基础上增加20个字节
+    printf("(arr + 1) : %p\n",arr + 1);//结果是在第一个元素的地址的基础上增加4个字节（sizeof(int)）
+    
+    
+    //下标运算符是语法糖. arr[i] 等同于 *(arr + i)
+    //由此:arr[i] = *(arr + i) = *(i + arr) = i[arr]
+    //4[arr] = ?  (arr[4])
+    
+    printf("4[arr] : %d\n",4[arr]);
+    
+}
 
 
 /***************************************** Bit ***************************************************************/
@@ -200,11 +249,6 @@ void fileCopy(FILE* ifp,FILE* ofp) {
 }
 
 
-int main(int argc, const char * argv[]) {
-    
-    
-    return 0;
-}
 
 
 
