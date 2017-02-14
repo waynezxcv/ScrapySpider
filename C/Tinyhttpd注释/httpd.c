@@ -36,15 +36,13 @@ void unimplemented(int);
 
 //接收到请求
 //(int client):客户端socket的文件描述符
-
 void accept_request(int client) {
     
-    char buf[1024];//buffer
+    char buf[1024];
     int numchars;
-    
-    char method[255];//请求方法
-    char url[255];//客户端的URL
-    char path[512];//静态文件或可执行文件的路径
+    char method[255];
+    char url[255];
+    char path[512];
     
     size_t i, j;
     struct stat st;

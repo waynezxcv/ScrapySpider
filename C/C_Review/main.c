@@ -55,6 +55,15 @@ void pointerAndArray () {
     printf("(&arr + 1) : %p\n",ap + 1);//结果是在数组第一个元素的地址的基础上增加20个字节
     printf("(arr + 1) : %p\n",arr + 1);//结果是在第一个元素的地址的基础上增加4个字节（sizeof(int)）
     
+    //3.用字符串常量进行赋值的时候
+    
+    char ch [6];
+    
+    ch = "hello";
+    
+    printf("ch : %s \n",ch);
+    
+    
     
     //下标运算符是语法糖. arr[i] 等同于 *(arr + i)
     //由此:arr[i] = *(arr + i) = *(i + arr) = i[arr]
