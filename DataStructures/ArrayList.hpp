@@ -135,7 +135,7 @@ namespace LWTL {
             arrayLength = rhs.arrayLength;
             ListSize = rhs.ListSize;
             delete [] elements;
-            elements = new T(arrayLength);
+            elements = new T [arrayLength];
             memcpy(elements, rhs.elements, ListSize *  sizeof(T));
             return *this;
         }
@@ -240,6 +240,7 @@ namespace LWTL {
         int capacity;
         int arrayLength;//数组的容量
         int ListSize;//线性表的元素个数
+        
         
         //检查索引值是否非法
         void checkIndex(const int& index) const {
