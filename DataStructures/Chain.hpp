@@ -23,9 +23,32 @@
  THE SOFTWARE.
  */
 
-#include "IllegalParameterValue.hpp"
 
 
-void LWTL::IllegalParameterValue::outputMessage() const{
-    std::cout << message << std::endl;
+
+#ifndef LinkList_hpp
+#define LinkList_hpp
+
+#include <stdio.h>
+#include "LinearList.hpp"
+
+#pragma mark - 链式描述的线性表
+
+
+
+namespace LWTL {
+
+    template <typename T>
+
+    class Chain : public LinearList<T> {
+
+    public:
+
+
+
+        
+        
+    };
 }
+
+#endif /* LinkList_hpp */

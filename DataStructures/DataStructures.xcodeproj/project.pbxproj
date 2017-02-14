@@ -24,9 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0156641C1E5383F900FE6BE4 /* ArrayList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayList.hpp; sourceTree = SOURCE_ROOT; };
 		017650CE1E531A16004D51DB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
 		017650D01E531A1E004D51DB /* LinearList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearList.hpp; sourceTree = SOURCE_ROOT; };
-		017650D11E531A1E004D51DB /* LinkList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkList.hpp; sourceTree = SOURCE_ROOT; };
+		017650D11E531A1E004D51DB /* Chain.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Chain.hpp; sourceTree = SOURCE_ROOT; };
 		017650D21E531A1E004D51DB /* VectorList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VectorList.hpp; sourceTree = SOURCE_ROOT; };
 		017650D31E531A24004D51DB /* IllegalParameterValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IllegalParameterValue.cpp; sourceTree = SOURCE_ROOT; };
 		017650D41E531A24004D51DB /* IllegalParameterValue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IllegalParameterValue.hpp; sourceTree = SOURCE_ROOT; };
@@ -74,8 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				017650D01E531A1E004D51DB /* LinearList.hpp */,
-				017650D11E531A1E004D51DB /* LinkList.hpp */,
+				0156641C1E5383F900FE6BE4 /* ArrayList.hpp */,
 				017650D21E531A1E004D51DB /* VectorList.hpp */,
+				017650D11E531A1E004D51DB /* Chain.hpp */,
 			);
 			name = LinearList;
 			sourceTree = "<group>";

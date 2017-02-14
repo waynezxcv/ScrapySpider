@@ -1,4 +1,27 @@
-
+/*
+ Copyright (c) 2017 waynezxcv <liuweiself@126.com>
+ 
+ https://github.com/waynezxcv/Playground
+ 
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+ */
 
 #include <stdio.h>
 #include <string.h>
@@ -52,8 +75,8 @@ void pointerAndArray () {
     int* ip = arr;//指向数组第一个元素的指针(&arr[0])
     
     printf("(&arr) : %p\n",ap);
-    printf("(&arr + 1) : %p\n",ap + 1);//结果是在数组第一个元素的地址的基础上增加20个字节
-    printf("(arr + 1) : %p\n",arr + 1);//结果是在第一个元素的地址的基础上增加4个字节（sizeof(int)）
+    printf("(&arr + 1) : %p\n",ap + 1);//结果是在数组第一个元素的地址的基础上增加20个字节 sizeof(int) * 5;
+    printf("(arr + 1) : %p\n",arr + 1);//结果是在第一个元素的地址的基础上增加4个字节（sizeof(int)）;
     
     //3.用字符串常量进行赋值的时候
     
@@ -235,7 +258,7 @@ void IO_API() {
     //这3个文件分别是：标准输入，标准输出，标准错误。
     //对应的文件指针分别是stdin,stdout,stderr
     
-    FILE* ifp = fopen("/Users/liuwei/Desktop/Playground/C_Review/testfile", "r");
+    FILE* ifp = fopen("/Users/liuwei/Desktop/Playground/C_Review/testfile","r");
     FILE* ofp = fopen("/Users/liuwei/Desktop/Playground/C_Review/testfile_copy", "w");//打开一个不存在文件用于写，该文件将会被创建
     
     fileCopy(ifp, ofp);
@@ -256,8 +279,6 @@ void fileCopy(FILE* ifp,FILE* ofp) {
         putc(c, ofp);
     }
 }
-
-
 
 
 
